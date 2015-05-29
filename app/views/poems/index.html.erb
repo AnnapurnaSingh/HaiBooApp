@@ -7,7 +7,7 @@
 
   <% @poems.each do |poem| %>
     <li>
-      <a href="/poem/<%= poem.id %>">
+      <a href="/poems/<%= poem.id %>">
         <%= poem.author.name %>
         <br>
         <%= poem.line_01 %>

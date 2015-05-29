@@ -1,2 +1,5 @@
-<h1>Poems#show</h1>
-<p>Find me in app/views/poems/show.html.erb</p>
+<h1>Poem #<%= @poem.id %></h1>
+<h2>by <em><%= @poem.author.name %></h2>
+<p><%= @poem.line_01 %></p>
+<p><%= @poem.line_02 %></p>
+<p><%= @poem.line_03 %></p>
