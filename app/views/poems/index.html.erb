@@ -1,19 +1,22 @@
-<h1>Poems#index</h1>
-<p>Find me in app/views/poems/index.html.erb</p>
+<h1>All Da Haikus</h1>
+<!-- <p>Find me in app/views/poems/index.html.erb</p> -->
 
-<a href="/poems">HaiBoo Home</a>
+<a href="/poems/new">Take me to your HaiBoo Maker</a>
+
 <ul>
 
   <% @poems.each do |poem| %>
     <li>
       <a href="/poem/<%= poem.id %>">
-        <%= poem.text %>
+        <%= poem.author.name %>
+        <br>
+        <%= poem.line_01 %>
+        <br>
+        <%= poem.line_02 %>
+        <br>
+        <%= poem.line_03 %>
       </a>
     </li>
   <% end %>
 
 </ul>
-
-<% form_tag("/poems/#{@poem.id }"), method: :create) do %>
-  <%= submit_tag "Create a HaiBoo!" %>
-<% end %>

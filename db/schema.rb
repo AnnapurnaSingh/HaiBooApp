@@ -11,15 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150526122950) do
+ActiveRecord::Schema.define(version: 20150528205656) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "authors", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "poems", force: :cascade do |t|
-    t.integer  "poem_id"
-    t.string   "author"
-    t.string   "text"
+    t.integer  "author_id"
+    t.string   "line_01"
+    t.string   "line_02"
+    t.string   "line_03"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

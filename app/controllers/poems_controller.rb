@@ -25,11 +25,21 @@ class PoemsController < ApplicationController
   # def update
   # end
 
+  def api
+    id = params[:id]
+    if (id)
+      @poem = Poem.find(id)
+    else
+      @poem = Poem.all
+    end
+    render json: @poem
+  end
+
 
   private
 
   def poem_params
-    params.require(:poem).permit(:poem_id, :author, :text)
+    params.require(:poem).permit(:author_id, :line_01, :line_02, :line_03)
   end
 
 

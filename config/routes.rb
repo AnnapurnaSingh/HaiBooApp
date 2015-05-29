@@ -2,26 +2,12 @@ Rails.application.routes.draw do
 
   resources :users
   resources :poems
-  
-  # get 'users/index'
-  #
-  # get 'users/new'
-  #
-  # get 'users/edit'
-  #
-  # get 'users/show'
-  #
-  # get 'users/profile'
-  #
-  # get 'poems/index'
-  #
-  # get 'poems/new'
-  #
-  # get 'poems/edit'
-  #
-  # get 'poems/show'
-  #
-  # get 'poems/profile'
+  resources :authors
+
+  root 'poems#index'
+
+  get '/poems/new' => 'poems#new'
+  get '/api/poems' => 'poems#api'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
