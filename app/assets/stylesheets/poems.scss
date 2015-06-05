@@ -1,3 +1,44 @@
 // Place all the styles related to the Poems controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+#AllDaHaikusContainer {
+    background-image: url("FlowerMartaPawlik.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+#HaiBooContainer {
+    background-image: url("GorgesWymanH.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    text-align: center;
+}
+
+#EachHaikuHUG {
+    text-color:gray;
+    font-family:verdana;
+}
+
+#HaiBooMakerHUG {
+  text-color:gray;
+  font-family:verdana;
+}
+
+a.each_haiku {
+text-decoration: none;
+}
+
+h1 {
+    color:red;
+    font-family:verdana;
+    font-size:300%;
+    border:10px solid black;
+    padding:10px;
+}

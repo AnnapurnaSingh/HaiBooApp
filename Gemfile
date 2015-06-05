@@ -1,5 +1,10 @@
 source 'https://rubygems.org'
 
+group :test, :development do
+ gem 'dotenv-rails'
+end
+
+gem 'nexmo'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'

@@ -1,22 +1,28 @@
-<h1>All Da Haikus</h1>
+<div id="AllDaHaikusContainer">
+
+<h1>ALL DA HAIKUS...</h1>
 <!-- <p>Find me in app/views/poems/index.html.erb</p> -->
 
-<a href="/poems/new">Take me to your HaiBoo Maker</a>
+<a href="/profile">(Take me to your HaiBoo Maker!)</a>
 
+<div id="EachHaikuHUG">
 <ul>
-
   <% @poems.each do |poem| %>
     <li>
-      <a href="/poems/<%= poem.id %>">
-        <%= poem.author.name %>
+      <a class="each_haiku" href="/api/poems/<%= poem.id %>">
         <br>
         <%= poem.line_01 %>
         <br>
         <%= poem.line_02 %>
         <br>
         <%= poem.line_03 %>
+        <br>
+          (Author: <%= poem.author.name %>)
       </a>
     </li>
   <% end %>
 
 </ul>
+</div>
+
+</div>

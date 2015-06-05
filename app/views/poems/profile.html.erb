@@ -1,2 +1,64 @@
-<h1>Poems#profile</h1>
-<p>Find me in app/views/poems/profile.html.erb</p>
+<div id="HaiBooContainer">
+<h1>WELCOME TO YOUR HAIBOO MAKER!</h1>
+
+
+<div id="HaiBooMakerHUG">
+  <form>
+    <input id="get-HaiBoo" type="submit" value="Make New HaiBoo!" />
+  </form>
+
+  <div id="new-HaiBoo">
+  </div>
+
+  <form id='text-boo-form'>
+    <input id='phone-number' placeholder="boo's phone number" type="text" name="phone-number">
+    <input id='send' type="submit" value='Text HaiBoo to Ma Boo'>
+  </form>
+</div>
+
+
+<script text="text/javascript">
+
+  var currentPoem;
+
+  $('#get-HaiBoo').on('click', function(evt){
+
+    evt.preventDefault();
+
+    $.ajax({
+      url: '/api/HaiBoo',
+      success: function(poem) {
+        currentPoem = poem;
+        $('#new-HaiBoo').empty();
+        for (var i = 0; i < poem.length; i++) {
+          var line = poem[i];
+          $('#new-HaiBoo').append( $('<h3>').text(line) );
+        }
+      }
+    });
+
+  });
+
+
+  $('#send').on('click', function(evt){
+
+    evt.preventDefault();
+
+    $.ajax({
+      method: 'post',
+      url: '/api/textBoo',
+      data: {poem: currentPoem, phone_number: $('#phone-number').val()},
+      success: function(poem) {
+        alert('Boo Sent Message! <3')
+      }
+    });
+
+  });
+
+
+  $('#get-HaiBoo').click(); //Pretend HaiBoo already clicked
+
+</script>
+
+<a href="/index">Back to All Da Haikus...</a>
+</div>
