@@ -4,6 +4,8 @@ group :test, :development do
  gem 'dotenv-rails'
 end
 
+gem 'rails_12factor', group: :production
+
 gem 'nexmo'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
