@@ -4,11 +4,7 @@ Rails.application.routes.draw do
   # resources :poems
   # resources :authors
 
-
-  root 'poems#profile'
-
-
-  get '/profile' => 'poems#profile'
+  get '/' => 'poems#profile'
 
   get '/api/HaiBoo' => 'poems#HaiBoo'
 
