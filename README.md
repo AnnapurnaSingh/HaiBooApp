@@ -33,7 +33,7 @@ If you like hybrid HaiBoos, but have a craving for the real thing, click on the 
 
 If you like a particular haiku enough to want to contemplate it on its own page, just click on it to see something like so:
 
-![ScreenShot](/Haiku#33Screenshot.png)
+![ScreenShot](/Haiku33Screenshot.png)
 
 And that's about it for now - Start HaiBooing stat!
 Time is a-wasting and your boos won't Hai themselves.
@@ -43,4 +43,4 @@ Oh, and my app utilizes Ruby on Rails, Nokogiri, jQuery, Ajax, and Bootstrap and
 
 On a completely unrelated but thematically consistent note:
 
-![ScreenShot](/PlayfulBalls.gif)
+![ScreenShot](/PlayfulBallsBoo.gif)
